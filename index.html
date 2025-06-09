@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -11,13 +10,48 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="script.js" defer></script>
 
-    <title>Frontend Mentor | IP Address Tracker</title>
+    <title>IP Address Tracker</title>
   </head>
   <body>
-    IP Address Tracker Search for any IP address or domain IP Address Location
-    Timezone UTC
-    <!-- add offset value dynamically using the API -->
-    ISP
+    <!-- Wrapper container for application -->
+    <div id="application">
+      <!-- Header scrion for title and input form -->
+      <header>
+        <h1>IP Address Tracker</h1>
+        <!-- Container for input -->
+        <div class="input-container">
+          <input
+            type="text"
+            id="ipInput"
+            placeholder="Search for any IP address"
+          />
+          <button id="searchButton"></button>
+        </div>
+        <!-- Panel displaying IP address information -->
+        <div class="info-panel">
+          <div>
+            <span>IP Address</span>
+            <p id="ip"></p>
+          </div>
+          <div>
+            <span>Location</span>
+            <p id="location"></p>
+          </div>
+          <div>
+            <span>Timezone</span>
+            <p id="timezone"></p>
+          </div>
+          <div>
+            <span>ISP</span>
+            <p id="isp"></p>
+          </div>
+        </div>
+      </header>
+      <!-- Container rendering interactive Leaflet map -->
+      <div id="map"></div>
+    </div>
   </body>
 </html>
