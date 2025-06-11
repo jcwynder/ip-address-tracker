@@ -1,0 +1,4 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://unpkg.com/; style-src 'self' https://unpkg.com/ https://fonts.googleapis.com/; font-src 'self' https://fonts.gstatic.com/; img-src 'self' data: https://unpkg.com/ ; connect-src 'self' https://get.geojs.io/;"
