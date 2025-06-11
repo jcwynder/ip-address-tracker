@@ -12,7 +12,7 @@
 
 body {
   font-family: "Rubik", sans-serif;
-  font-size: 18px;
+  font-size: 18px; /* Base font size, but info-box elements will be smaller */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -22,7 +22,7 @@ body {
   background-image: url("./images/pattern-bg-desktop.png");
   background-size: cover;
   background-position: center;
-  padding: 2rem 1rem 8rem; /* Keep this for now, we'll adjust info-box positioning */
+  padding: 2rem 1rem 8rem; /* Will be adjusted later for overlap */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,19 +69,19 @@ body {
   background-color: hsl(0, 0%, 30%);
 }
 
-/* --- INFO BOX ADJUSTMENTS START HERE (further minimized) --- */
+/* --- INFO BOX EXTREME MINIMIZATION START HERE --- */
 .info-box {
   background-color: white;
   border-radius: 0.8rem;
-  padding: 0.8rem; /* Further reduced padding */
+  padding: 0.5rem; /* Drastically reduced padding */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.8rem; /* Further reduced gap */
+  gap: 0.5rem; /* Drastically reduced gap */
   width: 90%;
   max-width: 1000px;
   position: absolute;
-  bottom: -50px; /* Adjusted to pull it up even more */
+  bottom: -30px; /* Pulled up even more significantly */
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
@@ -90,35 +90,36 @@ body {
 .info-box__item {
   text-align: center;
   position: relative;
+  /* No padding here for mobile, relies on info-box padding */
 }
 
 .info-box__item:not(:last-child)::after {
   content: "";
   position: absolute;
-  bottom: -0.4rem; /* Adjusted separator offset */
+  bottom: -0.25rem; /* Adjusted separator offset */
   left: 50%;
   transform: translateX(-50%);
-  width: 25px; /* Smaller separator */
+  width: 15px; /* Tiny separator */
   height: 1px;
   background-color: var(--dark-gray);
   opacity: 0.3;
 }
 
 .info-box__label {
-  font-size: 0.6rem; /* Even smaller font */
+  font-size: 0.5rem; /* Smallest practical font size */
   text-transform: uppercase;
   color: var(--dark-gray);
-  margin-bottom: 0.3rem; /* Further reduced margin */
-  letter-spacing: 1.2px; /* Slightly reduced letter spacing */
+  margin-bottom: 0.1rem; /* Minimal margin */
+  letter-spacing: 0.8px; /* Tighter letter spacing */
   font-weight: 700;
 }
 
 .info-box__value {
-  font-size: 1.1rem; /* Even smaller font for values */
+  font-size: 0.9rem; /* Very small font for values */
   color: var(--very-dark-gray);
   font-weight: 500;
 }
-/* --- INFO BOX ADJUSTMENTS END HERE --- */
+/* --- INFO BOX EXTREME MINIMIZATION END HERE --- */
 
 #map {
   flex-grow: 1;
@@ -130,18 +131,18 @@ body {
 /* Desktop styles */
 @media (min-width: 768px) {
   .header {
-    padding-bottom: 8rem; /* Adjusted header padding to match new info-box size */
+    padding-bottom: 7rem; /* Adjusted header padding for new, smaller info-box */
   }
 
   .info-box {
     grid-template-columns: repeat(4, 1fr);
     text-align: left;
-    padding: 1rem 0.8rem; /* Further reduced padding for desktop */
-    bottom: -40px; /* Adjusted to pull it up for desktop */
+    padding: 0.6rem 0.5rem; /* Further reduced padding for desktop */
+    bottom: -25px; /* Adjusted to pull it up more for desktop */
   }
 
   .info-box__item {
-    padding: 0 0.8rem; /* Further reduced padding around items */
+    padding: 0 0.5rem; /* Further reduced padding around items */
   }
 
   .info-box__item:not(:last-child) {
@@ -153,10 +154,10 @@ body {
   }
 
   .info-box__label {
-    font-size: 0.7rem; /* Slightly reduced for desktop as well */
+    font-size: 0.6rem; /* Minimal for desktop as well */
   }
 
   .info-box__value {
-    font-size: 1.5rem; /* Slightly reduced for desktop as well */
+    font-size: 1.1rem; /* Minimal for desktop as well */
   }
 }
