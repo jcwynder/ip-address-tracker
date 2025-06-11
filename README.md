@@ -2,9 +2,17 @@
 
 This is a solution to the IP Address Tracker challenge on Frontend Mentor. Users can search for any IP address or domain and see key information about it, along with its location on an interactive map. When the page loads, it automatically displays information for the user's current IP address.
 
+## Live Demo
+
+You can view the live deployed version of this project here:
+**[https://jcwynder.github.io/ip-address-tracker/](https://jcwynder.github.io/ip-address-tracker/)**
+
+This application was deployed using **GitHub Pages**.
+
 ## Table of Contents
 
 - [IP Address Tracker](#ip-address-tracker)
+  - [Live Demo](#live-demo)
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
     - [The Challenge](#the-challenge)
