@@ -35,7 +35,7 @@ function initializeMap(lat, lng) {
 
 // Function to fetch IP data
 async function fetchIpData(ip = "") {
-  const url = ip ? `http://ip-api.com/json/${ip}` : "http://ip-api.com/json/";
+  const url = ip ? `https://ip-api.com/json/${ip}` : "http://ip-api.com/json/";
 
   try {
     const response = await fetch(url);
@@ -84,6 +84,4 @@ ipAddressInput.addEventListener("keydown", (event) => {
 });
 
 // Fetch user's IP on page load
-document.addEventListener("DOMContentLoaded", () => {
-  fetchIpData(); // No argument means it will fetch the user's current IP
-});
+fetchIpData(); // No argument means it will fetch the user's current IP
